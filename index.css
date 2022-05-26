@@ -251,18 +251,8 @@ div.oculto  {
     .cont_carrousel{
         height: 450px;
     }
-    .flechas{
-        width: 60px;
-        height: 60px;
-    }
-    
-    .flechas i{
-        font-size: 25px;
-        line-height: 60px;
-    }
-    .frase_car {
-        font-size: 60px;
-        bottom: 65%;
+    .flechas, .frase_car{
+        display: none;
     }
 }
 
@@ -270,10 +260,6 @@ div.oculto  {
     .cont_carrousel {
         height: 400px;
         position: static;
-    }
-    .frase_car {
-        bottom: 30%;
-        font-size: 50px;
     }
 }
 

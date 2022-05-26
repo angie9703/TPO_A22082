@@ -5,11 +5,6 @@ addEventListener('DOMContentLoaded', () => {
         btn_menu.addEventListener('click',() => {
             const nav_items = document.querySelector('.nav_items');
             nav_items.classList.toggle('show')
-
-            //oculta flechas carrousel
-            const ocultar = document.querySelectorAll('.ocultar');
-            for (let i = 0; i < ocultar.length; i++)
-            ocultar[i].classList.toggle('oculto')
             
         })
     }
