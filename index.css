@@ -1,0 +1,363 @@
+* {
+    margin:0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100vw;
+} 
+
+/* header */
+.logo img {
+    height: 95px;
+    padding: 0 30px;
+    margin-top: 5px;
+}
+
+.navbar {
+    background-color: rgb(255, 255, 255);
+    height: 100px;
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    box-shadow: 5px 0 10px rga( 0, 0, 0, .6);
+} 
+
+.nav_items {
+    display: flex;
+    margin-right: 30px;
+
+}
+.nav_items li {
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.nav_items li a {
+    padding: 7px 13px;
+    font-size: 22px;
+    display: block;
+    text-transform: uppercase;
+    color: rgb(72, 46, 46);
+}
+
+.nav_items li:hover {
+    background-color: rgba(196, 96, 15, 0.183);
+    transition: .4s;    
+}
+
+li.active {
+    border: solid 1px rgb(72, 46, 46);
+}
+.btn_menu {
+    margin-right: 50px;
+    font-size: 25px;
+    color: rgb(72, 71, 71);
+    cursor: pointer;
+    display: none;
+}
+ul.show {
+    top: 80px;
+}
+
+/* media header */
+@media screen and (max-width: 920px) {
+    .navbar {
+        height: 95px;
+    }
+    .logo img {
+        padding: 0px 20px;
+        height: 90px ;
+    }
+    .nav_items li a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .logo img {
+        height: 75px;
+    }
+    .navbar {
+        height: 80px;
+    }
+    .btn_menu {
+        display: inline-flex;
+    }
+    .nav_items {
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        background-color: #ef7c6a;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+
+
+    }
+    .nav_items li {
+        margin:30px 0 0 0;
+        line-height: 30px;
+    }
+    .nav_items li:hover {
+        background: none;
+    }
+    .nav_items li a {
+        font-size: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+    .nav_items li a:hover {
+        color: #f5e4bb;
+    }
+    li.active {
+        border: none;
+    }
+    
+}
+
+/*main */
+
+.cont_carrousel{
+    width: 100%;
+    max-width: 100vw;
+    position: relative;
+    height: 500px;
+}
+
+.cont_carrousel img {
+    width: 100%;
+    height: 100%;
+}
+.frase_car {
+    position: absolute;
+    left: 10%;
+    bottom: 60%;
+    font-size: 70px;
+    color: #fff;
+    font-family: 'Dancing Script', cursive;
+    max-width: 600px;
+}
+
+
+.flechas{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: (0,0,0,.7) ;
+    text-align: center;
+    position: absolute;
+    color: rgba(255, 255, 255, 0.938);
+    box-shadow: 0 0 10px rgba(255,255,255,.6);
+    transition: all .3s ease;
+}
+
+.flechas i{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 70px;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    color: white;
+}
+
+.flechas:hover{
+    cursor: pointer;
+    transform: scale(1.2,1.2);
+}
+
+.atras {
+    left: 2%;
+    top: calc(50% - 70px);
+}
+.adelante {
+    right: 2%;
+    top: calc(50% - 70px)
+}
+
+.presentacion { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 100vw;
+    background: url(images/champagne.jpg);
+    background-size: cover;
+    gap: 30px;
+    padding: 30px 0;
+}
+.presentacion h1 {
+    font-size: 45px;
+    color: rgb(72, 46, 46);
+    text-shadow: 1px 1px #fff;
+}
+.somos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 10px;
+    width: 90%;
+    text-align: center;
+    padding: 40px 25px;
+    gap: 45px;
+    font-size: 25px;
+    color: rgb(72, 46, 46);
+}
+
+.presentacion img {
+    height: 150px;
+    
+}
+.presentacion a {
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 3px;
+    border: solid 1px #fff;
+    font-weight: bold;
+    color: rgb(72, 46, 46);
+    transition: all .3s ease;
+}
+.presentacion a:hover {
+    background-color: rgba(255, 255, 255, 0.326);
+    color: #fff;
+    transform: scale(1.2,1.2);
+}
+
+div.oculto  {
+    display: none;
+}
+
+
+/* media main */
+@media screen and (max-width: 920px) {
+    .cont_carrousel{
+        height: 450px;
+    }
+    .flechas{
+        width: 60px;
+        height: 60px;
+    }
+    
+    .flechas i{
+        font-size: 25px;
+        line-height: 60px;
+    }
+    .frase_car {
+        font-size: 60px;
+        bottom: 65%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .cont_carrousel {
+        height: 400px;
+        position: static;
+    }
+    .frase_car {
+        bottom: 30%;
+        font-size: 50px;
+    }
+}
+
+/* Footer */
+.pie_pagina {
+    width: 100%;
+    max-width: 100vw;
+    background-color: rgb(30, 29, 29);
+    padding: 20px;
+    height: 100%;
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.logo_footer img {
+    width: 170px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 0 15px 20px;
+}
+
+.box a {
+    display: flex;
+    align-items: center;
+    color: rgb(201, 200, 200);
+    max-width: max-content ;
+}
+.box h4 {
+    font-size: 20px;
+    color: #fff;
+}
+.box ul li {
+    padding: 3px;
+    color: rgb(201, 200, 200);
+}
+.box ul li a:hover {
+    color: #fff;
+}
+
+
+/* Media footer */
+@media screen and (max-width: 920px) {
+    .pie_pagina {
+        display: grid;
+        grid-template-columns:  repeat(3, 1fr);
+        grid-template-rows: 110px 1fr;
+        padding: 15px;
+    }
+    .logo_footer {
+        grid-column: 1/-1;
+        padding-left: 30px;
+    }
+    .logo_footer img {
+        width: 120px;
+    }
+    .box  {
+        padding: 0;
+        padding-left: 30px;
+
+    }
+    .box img {
+        width: 48px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .pie_pagina {
+        display: grid;
+        grid-template-columns:  1fr;
+        grid-template-rows: 150px repeat(3,1fr);
+    }
+    .logo_footer {
+        padding-left: 20px;
+    }
+    .logo_footer img {
+        width: 170px;
+    }
+    .box  {
+        padding: 20px 0 20px 20px;
+    }
+
+}

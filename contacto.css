@@ -1,0 +1,367 @@
+* {
+    margin:0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* header */
+.logo img {
+    height: 95px;
+    padding: 0 30px;
+    margin-top: 5px;
+}
+
+.navbar {
+    background-color: #fff;
+    height: 100px;
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    box-shadow: 5px 0 10px rga( 0, 0, 0, .6);
+} 
+
+.nav_items {
+    display: flex;
+    margin-right: 30px;
+
+}
+.nav_items li {
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.nav_items li a {
+    padding: 7px 13px;
+    font-size: 22px;
+    display: block;
+    text-transform: uppercase;
+    color: rgb(72, 71, 71);
+    
+}
+
+.nav_items li:hover {
+    background-color: rgba(196, 96, 15, 0.183);
+    transition: .4s;    
+}
+
+li.active {
+    border: solid 1px rgb(72, 71, 71);
+}
+.btn_menu {
+    margin-right: 50px;
+    font-size: 25px;
+    color: rgb(72, 71, 71);
+    cursor: pointer;
+    display: none;
+}
+ul.show {
+    top: 80px;
+}
+
+/* media header */
+@media screen and (max-width: 920px) {
+    .navbar {
+        height: 95px;
+    }
+    .logo img {
+        padding: 0px 20px;
+        height: 90px ;
+    }
+    .nav_items li a {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .logo img {
+        height: 75px;
+    }
+    .navbar {
+        height: 80px;
+    }
+    .btn_menu {
+        display: inline-flex;
+    }
+    .nav_items {
+        position: absolute;
+        width: 100%;
+        overflow: hidden;
+        height: calc(100%-80px);
+        background-color: #ef7c6a;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+
+    }
+    .nav_items li {
+        margin:30px 0 0 0;
+        line-height: 30px;
+    }
+    .nav_items li:hover {
+        background: none;
+    }
+    .nav_items li a {
+        font-size: 20px;
+        color: #fff;
+        font-weight: bold;
+    }
+    .nav_items li a:hover {
+        color: #f5e4bb;
+    }
+    li.active {
+        border: none;
+    }
+}
+
+.bg_contacto {
+    width: 100%;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(images/eventos/1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    height: 400px;
+}
+.bg_contacto h1 {
+    color: #fff;
+    
+    font-size: 58px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.conte_contacto {
+    max-width: 100vw;
+    width: 100%;
+}
+.contacto  {
+    margin: 10px;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr;
+    background: url(images/dorado2.jpg);
+    background-size:cover ;
+    background-attachment: fixed;
+    grid-gap: 20px;
+    padding: 30px;
+    padding: 30px 40px 30px 0 ;
+}
+
+.contenedor_form, .ubicacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor_form h2, .ubicacion h2 {
+    font-size: 35px;
+    margin: 10px;
+    padding-bottom: 10px;
+    color: rgb(72, 71, 71);
+}
+.contenedor_form h3 {
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: rgb(72, 71, 71);
+}
+.contenedor_form h4 {
+    padding: 10px;
+    color: rgb(72, 71, 71);
+}
+.formulario {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.formulario input, .formulario select, textarea  {
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 16px;
+    border: 0;
+}
+.formulario label input {
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 16px;
+    border: 0;
+}
+.formulario > textarea {
+    max-width: 100%;
+    max-height: 160px;
+}
+.formulario > div {
+    padding: 0;
+}
+.envia_form {
+    padding: 15px 40px;
+}
+.envia_form:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.contenedor_map {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%;
+    padding-top: 25px;
+}
+.contenedor_map iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (max-width: 920px) {
+    .bg_contacto {
+        height: 300px ;
+    }
+    .contacto {
+        padding: 25px;
+    }
+    .contenedor_map {
+        padding-top: 15px;
+    }
+
+    .contenedor_form h2, .ubicacion h2 {
+        font-size: 30px;
+    }
+    .contenedor_form h3 {
+        font-size: 18px;
+    }
+
+}
+@media screen and (max-width: 800px) {
+    .bg_contacto {
+        height: 200px ;
+    }
+    .bg_contacto h1 {
+        font-size: 40px;
+    }
+    .contacto {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50px;
+    }
+    .contenedor_form h2, .ubicacion h2 {
+        font-size: 25px;
+        margin: 10px;
+        padding-bottom: 10px;
+    }
+    .formulario {
+        width: 100%;
+    }
+
+    
+}
+
+
+
+/* Footer */
+.pie_pagina {
+    width: 100%;
+    max-width: 100vw;
+    background-color: rgb(30, 29, 29);
+    padding: 20px;
+    height: 100%;
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);
+    grid-template-rows: 1fr;
+}
+
+.logo_footer img {
+    width: 170px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 0 15px 20px;
+}
+
+.box a {
+    display: flex;
+    align-items: center;
+    color: rgb(201, 200, 200);
+    max-width: max-content ;
+
+}
+.box h4 {
+    font-size: 20px;
+    color: #fff;
+}
+.box ul li {
+    padding: 3px;
+    color: rgb(201, 200, 200);
+}
+.box ul li a:hover{
+    color: #fff;
+}
+
+
+/* Media footer */
+@media screen and (max-width: 920px) {
+    .pie_pagina {
+        display: grid;
+        grid-template-columns:  repeat(3, 1fr);
+        grid-template-rows: 110px 1fr;
+        padding: 15px;
+    }
+    .logo_footer {
+        grid-column: 1/-1;
+        padding-left: 30px;
+    }
+    .logo_footer img {
+        width: 120px;
+    }
+    .box  {
+        padding: 0;
+        padding-left: 30px;
+
+    }
+    .box img {
+        width: 48px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .pie_pagina {
+        display: grid;
+        grid-template-columns:  1fr;
+        grid-template-rows: 150px repeat(3,1fr);
+    }
+    .logo_footer {
+        padding-left: 20px;
+    }
+    .logo_footer img {
+        width: 170px;
+    }
+    .box  {
+        padding: 20px 0 20px 20px;
+    }
+    .contenedor_map {
+        padding-bottom: 60%;
+    }
+    
+}
